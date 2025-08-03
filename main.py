@@ -19,7 +19,7 @@ with st.sidebar:
     
 if choice == "HomePage":
     home.app()   # call homepage function
-# elif choice == "Project":
-#     Project.app()    # call Project function
-# else:
-#     contact.app()    # call contact function
+elif choice == "Predict":
+    ...   # call Project function
+else:
+    viz.app()    # call contact function
