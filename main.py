@@ -1,5 +1,7 @@
 
-from .src import predict, viz, home
+from src.home import app as a
+from src.predict import app as b
+from src.viz import app as c
 
 import streamlit as st  
 from streamlit_option_menu import option_menu
@@ -19,8 +21,8 @@ with st.sidebar:
     )
     
 if choice == "HomePage":
-    home.app()   # call homepage function
+    a()   # call homepage function
 elif choice == "Predict":
-    predict.app()
+    b()
 else:
-    viz.app()    # call contact function
+    c()    # call contact function
