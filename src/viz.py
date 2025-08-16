@@ -7,10 +7,10 @@ def app():
 
     with st.expander("ℹ️ Take a quick glance at the data"):
         st.write("Here’s the raw penguins dataset preview.")
-        st.write(pd.read_csv(r"C:\Users\user\Documents\streamlit_tut\deployed_app\src\data\penguins.csv"))
+        st.write(pd.read_csv(r"deployed_app\src\data\penguins.csv"))
 
     # Base directory for images
-    BASE_DIR = Path(r"C:\Users\user\Documents\streamlit_tut\deployed_app\src\images")
+    BASE_DIR = Path(r"deployed_app\src\images")
 
     # List PNG/JPG files in the folder
     image_files = sorted([f for f in BASE_DIR.iterdir() if f.suffix.lower() in [".png", ".jpg", ".jpeg"]])
