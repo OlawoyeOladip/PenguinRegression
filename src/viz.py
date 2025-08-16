@@ -7,7 +7,7 @@ def app():
 
     with st.expander("ℹ️ Take a quick glance at the data"):
         st.write("Here’s the raw penguins dataset preview.")
-        st.write(pd.read_csv(r"deployed_app\src\data\penguins.csv"))
+        st.write(pd.read_csv(r"src\data\penguins.csv"))
 
     # Base directory for images
     BASE_DIR = Path(r"deployed_app\src\images")
