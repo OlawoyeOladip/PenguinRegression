@@ -3,10 +3,10 @@ import pandas as pd
 import streamlit as st
 
 # Load trained model and scaler
-with open(r'C:\Users\user\Documents\streamlit_tut\deployed_app\src\artifact\model.pkl', 'rb') as file:
+with open('artifact/model.pkl', 'rb') as file:
     model = pickle.load(file)
 
-with open(r'C:\Users\user\Documents\streamlit_tut\deployed_app\src\artifact\scaler.pkl', 'rb') as file:
+with open("artifact/scaler.pkl", 'rb') as file:
     scaling = pickle.load(file)
 
 def app():
