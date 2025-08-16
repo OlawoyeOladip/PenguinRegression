@@ -9,7 +9,7 @@ with open(r'C:\Users\user\Documents\streamlit_tut\deployed_app\src\artifact\mode
 with open(r'C:\Users\user\Documents\streamlit_tut\deployed_app\src\artifact\scaler.pkl', 'rb') as file:
     scaling = pickle.load(file)
 
-def predict_app():
+def app():
     st.title("🐧 Penguin Body Mass Prediction")
 
     st.markdown("### Enter Penguin Details")
@@ -37,8 +37,6 @@ def predict_app():
 
         # 🔹 Feature Engineering
         input_df['Area'] = input_df['bill_length_mm'] * input_df['bill_depth_mm']
-        input_df['mass_length'] = input_df['body_mass_g'] / input_df['bill_length_mm']
-        input_df['mass_depth'] = input_df['body_mass_g'] / input_df['bill_depth_mm']
         input_df['volume_mm3'] = input_df['Area'] * input_df['bill_depth_mm']
 
         # 🔹 One-Hot Encoding
